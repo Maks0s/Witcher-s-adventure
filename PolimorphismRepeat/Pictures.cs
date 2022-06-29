@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PolimorphismRepeat
 {
-    internal class LiteType : IType
+    public class Pictures
     {
-        public int SpeedBonus { get => 0; }
-        public int HPBonus { get => +10; }
-        public int Weigth { get => 0; }
+        public void PrintVestPictures()
+        {
+        }
     }
 }

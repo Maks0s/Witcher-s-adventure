@@ -25,14 +25,17 @@ namespace PolimorphismRepeat
             ValuesCounter(CurrentVest.ArmorType);
             ValuesCounter(CurrentPants.ArmorType);
             ValuesCounter(CurrentBoots.ArmorType);
+            BonusValuesCalculate();
         }
 
         private string _name = "Gervant from Ribiya";
-        public string Name { get; }
+        public string Name { get => _name; }
 
         private int _weight;
+        public int Weight { get => _weight; }
 
         private int _speed;
+        public int Speed { get => _speed; }
 
         private void BonusValuesCalculate()
         {
@@ -44,9 +47,10 @@ namespace PolimorphismRepeat
 
 
         private int _hp;
+        public int HP { get => _hp; }
 
         private int _armor;
-        public int Armor { get; private set; }
+        public int Armor { get => _armor; }
 
         
         public Vest CurrentVest { get; set; }
