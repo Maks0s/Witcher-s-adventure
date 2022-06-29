@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace PolimorphismRepeat
 {
-    public class PantsChooser
+    public class ArmorTypeChooser
     {
-        public Pants PantsWithNoType;
-        public Pants ChooseArmor()
+        public IType armorTypeToChoose;
+        public IType ChooseArmor()
         {
             IType[] armorType = { new LiteType(), new MediumType(), new HeavyType() };
             Console.WriteLine("Choose your armor Type");
@@ -22,9 +22,9 @@ namespace PolimorphismRepeat
                 strPlayerChoose = Console.ReadLine();
             }
             int playerChoose = Convert.ToInt32(strPlayerChoose);
-            PantsWithNoType.ArmorType = armorType[playerChoose];
+            armorTypeToChoose = armorType[playerChoose];
             Thread.Sleep(1000);
-            return PantsWithNoType;
+            return armorTypeToChoose;
         }
     }
 }

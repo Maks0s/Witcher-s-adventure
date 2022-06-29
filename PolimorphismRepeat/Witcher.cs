@@ -14,32 +14,34 @@ namespace PolimorphismRepeat
             _speed = 24;
             _hp = 100;
             _armor = 0;
-            var vestChoose = new VestChooser{ VestWithNoType = new LVL1Vest()};
-            CurrentVest = vestChoose.ChooseArmor();
-            var pantsChoose = new PantsChooser { PantsWithNoType = new LVL1Pants() };
-            CurrentPants = pantsChoose.ChooseArmor();
-            var bootsChoose = new BootsChooser { BootsWithNoType = new LVL1Boots() };
-            CurrentBoots = bootsChoose.ChooseArmor();
+            var typeChooser = new ArmorTypeChooser();
+            CurrentVest = new LVL1Vest();
+            CurrentVest.ArmorType = typeChooser.ChooseArmor();
+            CurrentPants = new LVL1Pants();
+            CurrentPants.ArmorType = typeChooser.ChooseArmor();
+            CurrentBoots = new LVL1Boots();
+            CurrentBoots.ArmorType = typeChooser.ChooseArmor();
+            CurrentSword = new LVL1Sword();
+            ValuesCounter(CurrentVest.ArmorType);
+            ValuesCounter(CurrentPants.ArmorType);
+            ValuesCounter(CurrentBoots.ArmorType);
         }
 
-        readonly string _name = "Gervant from Ribiya";
+        private string _name = "Gervant from Ribiya";
+        public string Name { get; }
 
-        private int _weight = 80;
+        private int _weight;
 
-        private int _speed = 24;
+        private int _speed;
 
-        private void SpeedCalculate()
+        private void BonusValuesCalculate()
         {
+            _armor += CurrentVest.Armor;
+            _speed += CurrentBoots.SpeedGain;
+            _weight += CurrentPants.WeightLift;
             _speed = _speed - (int)Math.Round(_weight * 10 / 100.0);
         }
 
-        private void WeightCalculate()
-        {
-            if (CurrentPants != null)
-            {
-                _weight =  _weight - CurrentPants.WeightLift;
-            }
-        }
 
         private int _hp;
 
@@ -56,9 +58,7 @@ namespace PolimorphismRepeat
 
         private void ValuesCounter ( IType armoryPart )
         {
-            WeightCalculate ();
             _weight += armoryPart.Weigth;
-            SpeedCalculate();
             _speed += armoryPart.SpeedBonus;
             _hp += armoryPart.HPBonus;
         }
