@@ -8,6 +8,6 @@ namespace PolimorphismRepeat
 {
     internal class LVL2Pants : Pants
     {
-        public override int WeightLift { get => 5; }
+        public override int WeightLift { get => 7; }
     }
 }

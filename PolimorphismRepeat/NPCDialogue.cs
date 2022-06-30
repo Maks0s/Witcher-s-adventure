@@ -25,10 +25,14 @@ namespace PolimorphismRepeat
 
         public void ShowCurrentInfo(Witcher witcher)
         {
-            Console.WriteLine($"Weight - {witcher.Weight} " +
-                $"\n Speed - {witcher.Speed}" +
-                $"\n Health - {witcher.HP}" +
-                $"\n Armor - {witcher.Armor}");
+            var pictures = new Pictures();
+            pictures.PrintGeralt();
+            Console.WriteLine(
+                $"              Weight - {witcher.Weight} " +
+                $"\n              Speed - {witcher.Speed}" +
+                $"\n              Health - {witcher.HP}" +
+                $"\n              Armor - {witcher.Armor}" +
+                $"\n              Damage - {witcher.CurrentSword.Damage}");
             Console.WriteLine();
             /*Console.WriteLine($"Vest - {nameof(witcher.CurrentVest.ArmorType)}");
             Console.WriteLine($"Pants - {nameof(witcher.CurrentPants.ArmorType)}");

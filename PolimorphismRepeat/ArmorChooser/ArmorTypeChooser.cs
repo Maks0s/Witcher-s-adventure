@@ -13,7 +13,6 @@ namespace PolimorphismRepeat
         {
             IType[] armorType = { new LightType(), new MediumType(), new HeavyType() };
             Console.WriteLine("Choose your armor Type");
-            Console.WriteLine("1 - Lite \n2 - Medium \n3 - Heavy");
             string strPlayerChoose = Console.ReadLine();
             if (strPlayerChoose != "1" && strPlayerChoose != "2" && strPlayerChoose != "3")
             {

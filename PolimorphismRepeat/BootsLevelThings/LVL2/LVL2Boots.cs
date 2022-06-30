@@ -8,6 +8,6 @@ namespace PolimorphismRepeat
 {
     internal class LVL2Boots : Boots
     {
-        public override int SpeedGain { get => 5; }
+        public override int SpeedGain { get => 7; }
     }
 }
