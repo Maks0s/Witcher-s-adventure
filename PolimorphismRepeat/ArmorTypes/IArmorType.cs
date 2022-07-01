@@ -8,8 +8,9 @@ namespace PolimorphismRepeat
 {
     public interface IType
     {
-        public int SpeedBonus { get;}
-        public int HPBonus { get;}
-        public int Weigth { get;}
+        public string TypeName { get; }
+        public int SpeedBonus { get; }
+        public int HPBonus { get; }
+        public int Weigth { get; }
     }
 }

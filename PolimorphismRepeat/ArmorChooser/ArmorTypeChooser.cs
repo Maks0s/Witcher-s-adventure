@@ -22,7 +22,7 @@ namespace PolimorphismRepeat
             }
             int playerChoose = Convert.ToInt32(strPlayerChoose);
             armorTypeToChoose = armorType[playerChoose-1];
-            Thread.Sleep(1500);
+            Thread.Sleep(500);
             Console.Clear();
             return armorTypeToChoose;
         }

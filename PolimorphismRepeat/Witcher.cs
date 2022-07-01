@@ -43,7 +43,7 @@ namespace PolimorphismRepeat
 
         private void BonusValuesCalculate()
         {
-            _armor += CurrentVest.Armor;
+            _armor = CurrentVest.Armor;
             _speed += CurrentBoots.SpeedGain;
             _weight += CurrentPants.WeightLift;
             _speed = _speed - (int)Math.Round(_weight * 10 / 100.0);
@@ -74,5 +74,7 @@ namespace PolimorphismRepeat
             _speed += armoryPart.SpeedBonus;
             _hp += armoryPart.HPBonus;
         }
+        
+        public int HPReducing(int damageReceived) => _hp = _hp - (damageReceived - _armor);
     }
 }

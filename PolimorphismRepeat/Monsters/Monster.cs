@@ -8,9 +8,21 @@ namespace PolimorphismRepeat
 {
     public class Monster
     {
-        public string Name { get; set; }
-        public int Speed { get; set; }
-        public int HP { get; set; }
-        public int Armor { get; set; }
+        protected string _name;
+        public string Name { get => _name; }
+
+        protected int _speed;
+        public int Speed { get => _speed; }
+
+        protected int _hp;
+        public int HP { get => _hp; }
+
+        protected int _armor;
+        public int Armor { get => _armor; }
+
+        protected int _damage;
+        public int Damage { get => _damage; }
+
+        public int HPReducing(int damageReceived) => _hp = _hp - (damageReceived - _armor);
     }
 }

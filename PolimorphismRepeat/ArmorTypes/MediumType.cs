@@ -8,6 +8,7 @@ namespace PolimorphismRepeat
 {
     internal class MediumType : IType
     {
+        public string TypeName { get => "Medium armor"; }
         public int SpeedBonus { get => -4; }
         public int HPBonus { get => +20; }
         public int Weigth { get => +4; }

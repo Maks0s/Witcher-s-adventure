@@ -34,10 +34,9 @@ namespace PolimorphismRepeat
                 $"\n              Armor - {witcher.Armor}" +
                 $"\n              Damage - {witcher.CurrentSword.Damage}");
             Console.WriteLine();
-            /*Console.WriteLine($"Vest - {nameof(witcher.CurrentVest.ArmorType)}");
-            Console.WriteLine($"Pants - {nameof(witcher.CurrentPants.ArmorType)}");
-            Console.WriteLine($"Boots - {nameof(witcher.CurrentBoots.ArmorType)}");
-            Console.WriteLine($"Sword - {nameof(witcher.CurrentSword)}");*/
+            Console.WriteLine($"              Vest - {witcher.CurrentVest.ArmorType.TypeName}");
+            Console.WriteLine($"              Pants - {witcher.CurrentPants.ArmorType.TypeName}");
+            Console.WriteLine($"              Boots - {witcher.CurrentBoots.ArmorType.TypeName}");
         }
     }
 }
