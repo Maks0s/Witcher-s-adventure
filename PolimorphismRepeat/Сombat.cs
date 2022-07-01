@@ -9,6 +9,8 @@ namespace PolimorphismRepeat
     public class Сombat
     {
         private Random _random = new Random();
+        private bool _isWitcherAlive = true;
+        public bool IsWitcherAlive { get => _isWitcherAlive; }
         public void FightSimulation(Witcher witcher, Monster monster)
         {
             int firstHit = _random.Next(1);
@@ -18,13 +20,17 @@ namespace PolimorphismRepeat
             }
             else
             {
+                if (!IsDamageEvaded(witcher.Speed))
+                {
+                    witcher.HPReducing(monster.Damage);
+                }
                 Fight(witcher, monster);
             }
         }
 
         private void Fight(Witcher witcher, Monster monster)
         {
-            while(monster.HP != 0 || witcher.HP !=0)
+            while(monster.HP != 0 && witcher.HP !=0)
             {
                 if(!IsDamageEvaded(monster.Speed))
                 {
@@ -35,6 +41,13 @@ namespace PolimorphismRepeat
                     witcher.HPReducing(monster.Damage);
                 }
             }
+
+            if(witcher.HP <= 0)
+            {
+                _isWitcherAlive = false;
+            }
+            Console.WriteLine(witcher.HP);
+            witcher.HPRefresh();
         }
 
         private bool IsDamageEvaded(int speed)

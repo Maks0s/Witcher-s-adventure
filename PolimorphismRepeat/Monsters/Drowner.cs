@@ -12,7 +12,7 @@ namespace PolimorphismRepeat
         {
             _name = "Swag Drowner";
             _speed = 22;
-            _hp = 100;
+            _hp = 150;
             _armor = 0;
             _damage = 40;
         }

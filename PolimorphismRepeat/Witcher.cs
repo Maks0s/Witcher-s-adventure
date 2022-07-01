@@ -75,6 +75,7 @@ namespace PolimorphismRepeat
             _hp += armoryPart.HPBonus;
         }
         
-        public int HPReducing(int damageReceived) => _hp = _hp - (damageReceived - _armor);
+        public void HPReducing(int damageReceived) => _hp = _hp - (damageReceived - _armor);
+        public void HPRefresh() => _hp = 100;
     }
 }
