@@ -7,7 +7,7 @@ namespace PolimorphismRepeat
         static void Main(string[] args)
         {
             var dialogue = new NPCDialogue();
-            /*dialogue.StartDialogue();*/
+            dialogue.StartDialogue();
             Witcher geralt = new Witcher();
             dialogue.ShowCurrentInfo(geralt);
             var combatPart = new Сombat();
@@ -17,7 +17,16 @@ namespace PolimorphismRepeat
                 dialogue.DefeatDialogue();
                 return;
             }
-            Console.WriteLine("Найс пиздилка");
+            dialogue.PrepForSecondBattleDialogue();
+            geralt.TakeGear(new LVL2Vest(), new LVL2Pants(), new LVL2Boots(), new LVL2Sword());
+            dialogue.ShowCurrentInfo(geralt);
+            dialogue.SecondBattleDialogue();
+            combatPart.FightSimulation(geralt, new Wilkołak());
+            if (!combatPart.IsWitcherAlive)
+            {
+                dialogue.DefeatDialogue();
+                return;
+            }
         }
     }
 }

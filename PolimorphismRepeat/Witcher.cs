@@ -14,18 +14,23 @@ namespace PolimorphismRepeat
             _speed = 24;
             _hp = 100;
             _armor = 0;
+            TakeGear(new LVL1Vest(), new LVL1Pants(), new LVL1Boots(), new LVL1Sword());
+        }
+
+        public void TakeGear(Vest vestLVL, Pants pantsLVL, Boots bootsLVL, Sword swordLVL)
+        {
             var typeChooser = new ArmorTypeChooser();
             var pictures = new Pictures();
-            CurrentVest = new LVL1Vest();
+            CurrentVest = vestLVL;
             pictures.PrintVestPictures();
             CurrentVest.ArmorType = typeChooser.ChooseArmor();
-            CurrentPants = new LVL1Pants();
+            CurrentPants = pantsLVL;
             pictures.PrintPants();
             CurrentPants.ArmorType = typeChooser.ChooseArmor();
-            CurrentBoots = new LVL1Boots();
+            CurrentBoots = bootsLVL;
             pictures.PrintBoots();
             CurrentBoots.ArmorType = typeChooser.ChooseArmor();
-            CurrentSword = new LVL1Sword();
+            CurrentSword = swordLVL;
             ValuesCounter(CurrentVest.ArmorType);
             ValuesCounter(CurrentPants.ArmorType);
             ValuesCounter(CurrentBoots.ArmorType);
@@ -61,10 +66,10 @@ namespace PolimorphismRepeat
         public int Armor { get => _armor; }
 
         
-        public Vest CurrentVest { get; set; }
-        public Pants CurrentPants { get; set; }
-        public Boots CurrentBoots { get; set; }
-        public Sword CurrentSword { get; set; }
+        public Vest CurrentVest { get; private set; }
+        public Pants CurrentPants { get; private set; }
+        public Boots CurrentBoots { get; private set; }
+        public Sword CurrentSword { get; private set; }
 
 
 
@@ -76,6 +81,13 @@ namespace PolimorphismRepeat
         }
         
         public void HPReducing(int damageReceived) => _hp = _hp - (damageReceived - _armor);
-        public void HPRefresh() => _hp = 100;
+        
+        public void StatsRefresh()
+        {
+            _weight = 80;
+            _speed = 24;
+            _hp = 100;
+            _armor = 0;
+        }
     }
 }

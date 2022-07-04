@@ -46,8 +46,7 @@ namespace PolimorphismRepeat
             {
                 _isWitcherAlive = false;
             }
-            Console.WriteLine(witcher.HP);
-            witcher.HPRefresh();
+            witcher.StatsRefresh();
         }
 
         private bool IsDamageEvaded(int speed)
