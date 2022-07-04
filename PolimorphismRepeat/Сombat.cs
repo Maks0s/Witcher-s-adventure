@@ -30,7 +30,7 @@ namespace PolimorphismRepeat
 
         private void Fight(Witcher witcher, Monster monster)
         {
-            while(monster.HP != 0 && witcher.HP !=0)
+            while(monster.HP >= 0 && witcher.HP >= 0)
             {
                 if(!IsDamageEvaded(monster.Speed))
                 {

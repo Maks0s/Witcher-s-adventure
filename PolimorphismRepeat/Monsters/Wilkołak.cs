@@ -14,7 +14,7 @@ namespace PolimorphismRepeat
             _speed = 22;
             _hp = 200;
             _armor = 0;
-            _damage = 65;
+            _damage = 45;
         }
     }
 }

@@ -27,6 +27,17 @@ namespace PolimorphismRepeat
                 dialogue.DefeatDialogue();
                 return;
             }
+            dialogue.PrepForThirdBattleDialogue();
+            geralt.TakeGear(new LVL3Vest(), new LVL3Pants(), new LVL3Boots(), new LVL3Sword());
+            dialogue.ShowCurrentInfo(geralt);
+            dialogue.ThirdBattleDialogue();
+            combatPart.FightSimulation(geralt, new Draug());
+            if (!combatPart.IsWitcherAlive)
+            {
+                dialogue.DefeatDialogue();
+                return;
+            }
+            dialogue.EndDialogue();
         }
     }
 }
