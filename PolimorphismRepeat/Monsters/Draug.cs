@@ -12,7 +12,7 @@ namespace PolimorphismRepeat
         {
             _name = "Vandergrift the Visitor";
             _speed = 5;
-            _hp = 500;
+            _hp = 320;
             _armor = 20;
             _damage = 65;
         }

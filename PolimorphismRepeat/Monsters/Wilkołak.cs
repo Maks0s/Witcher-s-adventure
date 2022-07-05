@@ -12,7 +12,7 @@ namespace PolimorphismRepeat
         {
             _name = "Crazy Wilkołak";
             _speed = 22;
-            _hp = 200;
+            _hp = 210;
             _armor = 0;
             _damage = 45;
         }

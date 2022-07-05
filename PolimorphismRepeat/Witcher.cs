@@ -22,13 +22,13 @@ namespace PolimorphismRepeat
             var typeChooser = new ArmorTypeChooser();
             var pictures = new Pictures();
             CurrentVest = vestLVL;
-            pictures.PrintVestPictures();
+            pictures.PrintVestPictures(vestLVL);
             CurrentVest.ArmorType = typeChooser.ChooseArmor();
             CurrentPants = pantsLVL;
-            pictures.PrintPants();
+            pictures.PrintPants(pantsLVL);
             CurrentPants.ArmorType = typeChooser.ChooseArmor();
             CurrentBoots = bootsLVL;
-            pictures.PrintBoots();
+            pictures.PrintBoots(bootsLVL);
             CurrentBoots.ArmorType = typeChooser.ChooseArmor();
             CurrentSword = swordLVL;
             ValuesCounter(CurrentVest.ArmorType);
