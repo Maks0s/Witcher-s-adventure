@@ -16,7 +16,7 @@ namespace PolimorphismRepeat
         public void FightSimulation(Witcher witcher, Monster monster)
         {
             int firstHit = _random.Next(2);
-            _pictures.PrintWitcherAndMonster();
+            _pictures.PrintWitcherAndMonster(monster);
             Console.WriteLine("Press ENTER to continue...");
             Console.ReadKey();
             if (firstHit == 0)
@@ -25,8 +25,8 @@ namespace PolimorphismRepeat
             }
             else
             {
-                _pictures.PrintWitcherAndMonster();
-                _pictures.PrintMonsterHitsWitcher();
+                _pictures.PrintWitcherAndMonster(monster);
+                _pictures.PrintMonsterHitsWitcher(monster);
                 if (!IsDamageEvaded(witcher.Speed))
                 {
                     witcher.HPReducing(monster.Damage);
@@ -37,27 +37,35 @@ namespace PolimorphismRepeat
 
         private void Fight(Witcher witcher, Monster monster)
         {
-            while (monster.HP >= 0 && witcher.HP >= 0)
+            while (true)
             {
                 int randomHit = _random.Next(2);
-                _pictures.PrintWitcherAndMonster();
+                _pictures.PrintWitcherAndMonster(monster);
                 if(randomHit == 0)
                 {
-                    _pictures.PrintWitcherHitsMonster();
+                    _pictures.PrintWitcherHitsMonster(monster);
                 }
                 else
                 {
-                    _pictures.PrintWitcherSingHitMonster();
+                    _pictures.PrintWitcherSingHitMonster(monster);
                 }
                 if (!IsDamageEvaded(monster.Speed))
                 {
                     monster.HPReducing(witcher.CurrentSword.Damage);
                 }
-                _pictures.PrintWitcherAndMonster();
-                _pictures.PrintMonsterHitsWitcher();
+                if(monster.HP <= 0)
+                {
+                    break;
+                }
+                _pictures.PrintWitcherAndMonster(monster);
+                _pictures.PrintMonsterHitsWitcher(monster);
                 if (!IsDamageEvaded(witcher.Speed))
                 {
                     witcher.HPReducing(monster.Damage);
+                }
+                if(witcher.HP <= 0)
+                {
+                    break;
                 }
             }
 
