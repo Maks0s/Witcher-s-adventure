@@ -109,6 +109,7 @@ __   __            _                       _                                    
 
         public void PrepForSecondBattleDialogue()
         {
+            Console.Clear();
             Console.WriteLine(@"
  _____                _       _       _           _    _ _ _       _                 _ 
 |  __ \              | |     (_)     | |         | |  | (_) |     | |               | |
@@ -170,6 +171,7 @@ __   __            _                       _                                    
 
         public void SecondBattleDialogue()
         {
+            Console.Clear();
             Console.WriteLine(@"
  _____                                       _                           _                            _               
 |_   _|                                     | |                         | |                          | |              
@@ -273,6 +275,7 @@ ______          _                                       _   _ _ _               
 
         public void PrepForThirdBattleDialogue()
         {
+            Console.Clear();
             Console.WriteLine(@"
 __   __                _ _     _   _ _                 _      _    _         _ 
 \ \ / /               | (_)   | | (_) |               (_)    | |  | |       | |
@@ -353,6 +356,7 @@ __   ___| | | __ _  __ _  ___
 
         public void ThirdBattleDialogue()
         {
+            Console.Clear();
             Console.WriteLine(@"
 _____                                 _          _       _                        
 |_   _|                               | |        | |     | |                       
@@ -530,6 +534,7 @@ __      _____  ___| | __
 
         public void EndDialogue()
         {
+            Console.Clear();
             Console.WriteLine(@"
  _____ _       _____                _ _                             _                                               _ 
 |  _  | |     |  __ \              | | |                           | |                                             | |

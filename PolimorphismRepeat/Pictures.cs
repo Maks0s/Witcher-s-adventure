@@ -136,43 +136,38 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
                                                                                                         ");
             Thread.Sleep(500);
         }
-        public void PrintWitcherAndMonster(Monster monster)
+        public void PrintWitcherAndMonster(Witcher witcher, Monster monster)
         {
             switch (monster.Name)
             {
                 case "Swag Drowner":
                     Console.Clear();
                     Console.WriteLine(@"
-                                                                                                                                  
-               %                                                                                                                  
-              #/%     /.  .                                                               &&&&&                                   
-               #(,    (*....,/                                                          %%%%%%%&%&&&                              
-               @((  ##*%(*..,*                                                         %%%%%%%%&%%    %%%%    %%                  
-                ###%%%/##/.,#,.                                                       .%%%&%&##&%%   %%%%%#(%%%%*                 
-             %,#%#((%%%%%%%%%%/#(                                                      /%%%&&((%&&%%%%&&%%%%%%%%%                 
-           %/(#(###%((%%%%%/#(#(#(%#%(                                                     #%%&&%%%%&%&%%&&&##%%%%%#              
-          #((%,%%%(##(**(,%#(#(((#*(%%                                                         %%&&&&&%&&%%%%&%%%%                
-         .%#%%#(#(#%#((((((#(#%#%#%(,(%                                %%                  (%%%%%&&&%%%&&%%%&&%%%                 
-          ,((#(%%(%(((%((%%%((#(%%#.(#%                               %%%%%%%%%%%%%%%%%%&%%%&   /%&&&&&&%&%%%%%%,                 
-          *(#%%(,%%%%%%%%#%(((%%%%(%%%                                  #%#%%%#.               %%%&&&&&&&%%%%%%.                  
-         #%(#%%  %(#/*#(%#((###%@%%((#%                               %%%                    &%&&&.    %%%%%%%&&                  
-         #%%%%%   ###/((#(%%%%%%@*/((#,                                                    (&%%&/       *((%%%&&                  
-         #%%%%   %%((#%(#((#((#%%  *(((                                         %#(   .###&&%.           %%%%%%%&##               
-         (%%%    %/%%%%%%%%%%%%%%   *(((*                                        /&&&&&&&#               &&%%%%%&&&               
-          %%%%   ##((#(%%%%%#((#%    ,((((,                                      (&.  &&                 &&%%%%%&&&               
-          (%%%/ .(#((#((%%/%#((#((    ////*                                                              &&&&&&&&&&               
-                ,(#((#((#%%%#((#(%       *///                                                         %%%%&%%(&&&&&               
-               .(#((#((#(%#%(#(#((.        ////                                                      %%&&&%%*   &&&&&             
-             **(#((#((#((%%%##((#(#          ///                                                    %%&&%%%     &&&&&             
-             (((#((#((#((///#(#((#(%          .//*                                                  &&&%%%      &&&&&&.           
-            (#(#((#(((((%(/(%((#((#(%           ///                                                 &&&%&%%      %&&&&.           
-            (((#((#((#(%%%%%%%(#((#((.            //                                                 %%%%&&%%      &&&&&          
-           *%((#(#(((#(%%%%%%%((#((#(#                                                                 %%%%&%%       &&&&&        
-          *%%(#(/#((#(%%%%%%%%#(/((%/(%                                                                 %%%%&%%         @&&/      
-         #%%#((#%((%%(%%%%%%%%%#%%(#%%%                                                                   %%%&%%          &&&     
-             *%%%%#%(#%%%%%&*%%%%%%%                                                                       %%%&&&          (&&&   
-                                                                                                            %%%&            &&&   
-                                                                                                           %%%,                    ");
+                                                                                                    
+      ,                                                                                             
+      ((    *...                                               %%%%%&&&&                            
+       (%  (.,, ,.,                                           %%%%%%&%%   %%%   %%                  
+       &((#%(#(*,/.                                           %%%%&&%%%&%%%%%%%%%%                  
+     %/%#((%%%%%%%/((                                          .%%%%%%%%&&&%&&%%%%%%/               
+   #%(#%%#(*(/%*((#((%###                                           .,&&&&%%%%%&%%%%                
+  #(%%%((%(((#((#%##%%%#%.                       %%              .%%%%&&%%%&%%%%%%%                 
+   /(##%(###,((%((#(%##(%%                        /%%%%%%%%%%%%&%%&   %%&&&&&%%%%%                  
+  ,(#%% %%%%%%%%(((#%###%                       #%%  %%             %%&&  %%%%%%%                   
+  (%%%  %/#%(/%%#(#%@%%%(                                         &%&/      ((%%&#                  
+  %%%%   #(#(#((#(##%.*(((                              #&%   &%&&%         &&%%%%&&                
+  %%%(  %#%%%%%%%%%%%  *(((                               &&%&&             &&%%%%&&                
+  %%%%  (#(#(#%###(#%   ,((((                                               &&&&&&&&                
+   /%   (#(#(#%%##(#(     ///,                                            %%%&%%&&&&                
+       *#((((#(/#((#(%      *//                                          %%&%%%   &&&#              
+     #((((#(#((%%(((#(/       ///                                       %%&%%*    &&&#              
+     ((#(#((((%//(#(((#         //                                      &&%% %     &&&&             
+    /(##(#(((#%%%%(#(#(%          /                                      /%%&&%/    %&&&            
+   .%(#(#((#(%%%%%((#(#(*                                                  %%%&%%      &&&&         
+   %%#(//(((%%%%%%%(%(#%(%                                                  .%%%%%       /&&        
+  %%%(#%((%(%%%%%%%#(%(%%                                                     %%&&(        &((      
+         ,,*%%%%%                                                             #%%.         .&%      
+           %%%%%%                                                                                  ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Crazy Wilkołak":
@@ -201,6 +196,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
       %#(#(((#%%%%%//(%(/                                   %%&*                        &%&&        
      %%%%#(%(%%%%%%##%%                               #@(&#%&@                          %#%#.       
              %%%%                                                                     /#&/&@#       ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Vandergrift the Visitor":
@@ -233,6 +229,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
                                             /(          #########%             (%%%%%#%#%%          
                                                        #%%%######%            ##%%%%%%###(          
                                                      ,##%%%%%%%#%%*            ,                    ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 default:
@@ -241,7 +238,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
             }
         }
 
-        public void PrintWitcherHitsMonster(Monster monster)
+        public void PrintWitcherHitsMonster(Witcher witcher, Monster monster)
         {
             switch (monster.Name)
             {
@@ -277,6 +274,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
     %%%##%%((##(%%%%%%%%%%(%%#%%                                           %%%&&&          &&&      
             #%%%%%%%%%                                                     *%%%            /&&      
                #%%%%%%                                                   %%.                      ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Crazy Wilkołak":
@@ -312,6 +310,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
        ,*#%#%##%%%%% **%%%**               ,(**#%(#%&@                                #%#%&#        
                %%%%%                                                                *@&&/%&*%       
                  %%%%                                                                               ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Vandergrift the Visitor":
@@ -349,6 +348,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
                  .%%%%                                  ###%%%#%%###%               ##%%%##%%#%(#%  
                                                        ###%%%%%%#%##%#              (&%#            
                                                       %%%%%#%%#%%(###                              ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 default:
@@ -357,7 +357,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
             }
         }
 
-        public void PrintWitcherSingHitMonster(Monster monster)
+        public void PrintWitcherSingHitMonster(Witcher witcher, Monster monster)
         {
             switch (monster.Name)
             {
@@ -389,6 +389,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
         (%%#(/#((#(%%%%%%#(/(/#(#                                                          %&&#                                   
        (%%*((%((%#(%%%%%%%##%(#%#/                                                         #&&&.                                  
            %%%%#%(%%%%%*%%%%%%%                                                            ,&&&#                                  ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Crazy Wilkołak":
@@ -418,6 +419,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
     #%#(%((/(%%%%%#//(%((                                            %                              
    /%%#%((%(%%%%%%%(%#%                                                                             
             %%%%                                                                                    ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Vandergrift the Visitor":
@@ -448,6 +450,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
         #%#%(%%%% #%%##                                                     ##%%%###    %%%%%#%&&&&*                    
              %%%%                                                           ,#%%%%(/     *%%%##                         
                                                                             %,             %#                         ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 default:
@@ -456,7 +459,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
             }
         }
 
-        public void PrintMonsterHitsWitcher(Monster monster)
+        public void PrintMonsterHitsWitcher(Witcher witcher, Monster monster)
         {
             switch (monster.Name)
             {
@@ -492,6 +495,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
            #%%((#%((/#(%%%%%%%%((#(#%(%                %%&*           %&&       
           %%%%((%(((%%#%%%%%%%%%(%%(%%.             ,%%                         
                  ..%%%%%%%%%     .                                              ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Crazy Wilkołak":
@@ -530,6 +534,7 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
        ***#%%#(%#(%%%%%%%%%#%%%*                                                          
                   %%%%%.                                                                  
                  %%%%%%%                                                                 ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 case "Vandergrift the Visitor":
@@ -567,12 +572,19 @@ MMMMMMMM               MMMMMMMM     IIIIIIIIII      SSSSSSSSSSSSSSS         SSSS
          %%%((%%((%#%%%%%%%%#(%(#%   ,/            (#%%%%###(((##                ####%%%%%%#%%%#    
                  %%%%%%%%.                         %#%########%##                #%%%##%%%%#,       
                     %%%%%/                       #%#%%%#%%%%%#%#%                (                  ");
+                    PrintHPBar(witcher, monster);
                     Thread.Sleep(1000);
                     break;
                 default:
                     Console.WriteLine("Wrong moster name");
                     break;
             }
+        }
+
+        private void PrintHPBar(Witcher witcher, Monster monster)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"     Witcher HP: {witcher.HP}                                             {monster.Name} HP: {monster.HP}");
         }
     }
 }   
