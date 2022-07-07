@@ -12,8 +12,8 @@ namespace PolimorphismRepeat
 
         public void StartDialogue()
         {
-            _pictures.PrintVesemir();
             Thread.Sleep(1000);
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____                      _                                _                      __          _              _ 
 |  __ \                    | |                              | |                    / _|        | |            | |
@@ -612,8 +612,8 @@ __      _____| | ___ ___  _ __ ___   ___    __ _ _ __  _   ___      _| |__   ___
             var pictures = new Pictures();
             pictures.PrintGeralt();
             Console.WriteLine(
-                $"              Weight - {witcher.Weight} " +
-                $"\n              Speed - {witcher.Speed}" +
+                $"              Weight - {witcher.Weight} (Reduces speed by 10% of weight)" +
+                $"\n              Speed - {witcher.Speed} ({(int)(witcher.Speed*100)/45}% to dodge)" +
                 $"\n              Health - {witcher.HP}" +
                 $"\n              Armor - {witcher.Armor}" +
                 $"\n              Damage - {witcher.CurrentSword.Damage}");
