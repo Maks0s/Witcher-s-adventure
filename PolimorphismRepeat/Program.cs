@@ -7,7 +7,7 @@ namespace PolimorphismRepeat
         static void Main(string[] args)
         {
             var dialogue = new NPCDialogue();
-            /*dialogue.StartDialogue();*/
+            dialogue.StartDialogue();
             Witcher geralt = new Witcher();
             dialogue.ShowCurrentInfo(geralt);
             var combatPart = new Сombat();
