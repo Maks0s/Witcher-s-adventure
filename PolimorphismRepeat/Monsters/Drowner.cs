@@ -11,10 +11,10 @@ namespace PolimorphismRepeat
         public Drowner ()
         {
             _name = "Swag Drowner";
-            _speed = 18;
+            _speed = 22;
             _hp = 100;
             _armor = 0;
-            _damage = 35;
+            _damage = 40;
         }
     }
 }

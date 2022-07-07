@@ -11,10 +11,10 @@ namespace PolimorphismRepeat
         public Wilkołak()
         {
             _name = "Crazy Wilkołak";
-            _speed = 22;
+            _speed = 23;
             _hp = 210;
             _armor = 0;
-            _damage = 45;
+            _damage = 50;
         }
     }
 }
