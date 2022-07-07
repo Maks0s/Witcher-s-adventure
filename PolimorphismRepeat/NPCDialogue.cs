@@ -76,6 +76,7 @@ ______                                                          _               
 
         public void DefeatDialogue()
         {
+            Console.Clear();
             Console.WriteLine(@"
 __   __            _                       _                                    _ _ 
 \ \ / /           | |                     | |                                  | | |
@@ -221,6 +222,7 @@ __   __            _                       _                                    
                                                             ");
             Thread.Sleep(3000);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____       _                                             _   _____   _                                                     
 |  _  |     | |                                           | | |_   _| | |                                                    
