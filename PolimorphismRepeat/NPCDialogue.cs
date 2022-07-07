@@ -8,8 +8,11 @@ namespace PolimorphismRepeat
 {
     public class NPCDialogue
     {
+        private Pictures _pictures = new Pictures();
+
         public void StartDialogue()
         {
+            _pictures.PrintVesemir();
             Thread.Sleep(1000);
             Console.WriteLine(@"
  _____                      _                                _                      __          _              _ 
@@ -21,6 +24,7 @@ namespace PolimorphismRepeat
                                                                                                                  ");
             Thread.Sleep(3000);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____ _                                                                                                  _                      _        
 /  __ \ |                                                                                                | |                    | |       
@@ -39,6 +43,7 @@ namespace PolimorphismRepeat
                                                                                                                                               ");
             Thread.Sleep(5000);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
 ______                                                          _                                                         _   _ 
 |  _  \                                                        | |                                                       | | | |
@@ -110,6 +115,7 @@ __   __            _                       _                                    
         public void PrepForSecondBattleDialogue()
         {
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____                _       _       _           _    _ _ _       _                 _ 
 |  __ \              | |     (_)     | |         | |  | (_) |     | |               | |
@@ -121,6 +127,7 @@ __   __            _                       _                                    
                            |__/                                                        ");
             Thread.Sleep(2000);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____                                             _      _            _               _   
 |_   _|                                           (_)    | |          | |             | |  
@@ -148,6 +155,7 @@ __   __            _                       _                                    
                  |___/                    |___/                 ");
             Thread.Sleep(5500);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____                        _                                     _        _                          
 /  __ \                      | |                                   | |      | |                         
@@ -172,6 +180,7 @@ __   __            _                       _                                    
         public void SecondBattleDialogue()
         {
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____                                       _                           _                            _               
 |_   _|                                     | |                         | |                          | |              
@@ -193,6 +202,7 @@ __   __            _                       _                                    
                                                                             |___/                   |___/                         ");
             Thread.Sleep(2500);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
   ___  _ _            _ _       _                     _                       _       __ _   
  / _ \| | |          (_) |     | |                   | |                     | |     / _| |  
@@ -240,6 +250,7 @@ ______       _     _                                    _               _       
                                                             |_|   |_|                              ");
             Thread.Sleep(4000);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____                     _                      _     _       _           _                                   
 |_   _|                   | |                    | |   | |     | |         | |                                  
@@ -276,6 +287,7 @@ ______          _                                       _   _ _ _               
         public void PrepForThirdBattleDialogue()
         {
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
 __   __                _ _     _   _ _                 _      _    _         _ 
 \ \ / /               | (_)   | | (_) |               (_)    | |  | |       | |
@@ -287,6 +299,7 @@ __   __                _ _     _   _ _                 _      _    _         _
                                               |_|                    |___/     ");
             Thread.Sleep(2500);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
 ______       _                                                                          
 | ___ \     | |                                                                         
@@ -314,6 +327,7 @@ ______       _
 |_|                     |___/                    ");
             Thread.Sleep(4500);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
 ______                    _   _         _____                                                                _ _      
 | ___ \                  | | | |       |_   _|                                                              | (_)     
@@ -341,6 +355,7 @@ __   ___| | | __ _  __ _  ___
                    |___/      ");
             Thread.Sleep(5000);
             Console.Clear();
+            _pictures.PrintVesemir();
             Console.WriteLine(@"
  _____         _                                            _   _     _                                   
 |  __ \       | |                                          | | | |   (_)                                  
@@ -367,6 +382,7 @@ _____                                 _          _       _
                                                                                    ");
             Thread.Sleep(2500);
             Console.Clear();
+            _pictures.PrintCourier();
             Console.WriteLine(@"
 ___  ___          _                       _ _       _                 _ 
 |  \/  |         | |                     (_) |     | |               | |
@@ -392,8 +408,9 @@ ______ _                   _         _____   _                        __        
  \__, |\___/ \__,_|
   __/ |            
  |___/             ");
-            Thread.Sleep(4000);
+            Thread.Sleep(4500);
             Console.Clear();
+            _pictures.PrintCourier();
             Console.WriteLine(@"
  _   _ _      ___  ___      _           _           _   ___               _   _                     _ _   
 | | | (_)     |  \/  |     (_)         | |         | | / (_)             | | | |                   | | |  
@@ -411,7 +428,7 @@ __      ____ _ _ __ | |_ ___  | |_ ___    ___  ___  ___   _   _  ___  _   _
   \_/\_/ \__,_|_| |_|\__|___/  \__\___/  |___/\___|\___|  \__, |\___/ \__,_| (_) (_) (_)
                                                            __/ |                        
                                                           |___/                         ");
-            Thread.Sleep(4000);
+            Thread.Sleep(4500);
             Console.Clear();
             for(int i = 0; i < 3; i++)
             {
@@ -430,6 +447,7 @@ __      ____ _ _ __ | |_ ___  | |_ ___    ___  ___  ___   _   _  ___  _   _
                 Thread.Sleep(500);
                 Console.Clear();
             }
+            _pictures.PrintHenselt();
             Console.WriteLine(@"
  _____               _   _                       _____                _ _     _   _____ _          
 |  __ \             | | (_)                     |  __ \              | | |   | | |_   _| |         
@@ -455,8 +473,9 @@ __      ____ _ _ __ | |_ ___  | |_ ___    ___  ___  ___   _   _  ___  _   _
  \__,_|\___|_|\__,_|\__, | ( ) |___/\___/  |_|_| |_| |_|_| |_| |_|\___|\__,_|_|\__,_|\__\___|_|\__, |  \__\___/  |_|\__|
                      __/ | |/                                                                   __/ |                   
                     |___/                                                                      |___/                    ");
-            Thread.Sleep(5000);
+            Thread.Sleep(5500);
             Console.Clear();
+            _pictures.PrintHenselt();
             Console.WriteLine(@"
   ___          _                               _                     _                                             
  / _ \        | |                             | |                   | |                                            
@@ -474,8 +493,9 @@ __      ____ _ _ __ | |_ ___  | |_ ___    ___  ___  ___   _   _  ___  _   _
  \__|_| |_|\___| \_____/\___/ \_/\_/ \___|_|    \_|  |_/\__,_|_|  |_|\_\_| |_|_|\__,_|  \__,_|\__, |\__,_|_|_| |_| (_) (_) (_)
                                                                                                __/ |                          
                                                                                               |___/                           ");
-            Thread.Sleep(5000);
+            Thread.Sleep(5500);
             Console.Clear();
+            _pictures.PrintHenselt();
             Console.WriteLine(@"
 ______          _                  ______                                         _   _     _                                                   
 |  ___|        (_)                 |  _  \                                       | | | |   (_)                                                  
@@ -508,8 +528,9 @@ __      _____  ___| | __
  \ V  V /  __/  __/   < 
   \_/\_/ \___|\___|_|\_\
                         ");
-            Thread.Sleep(7500);
+            Thread.Sleep(8000);
             Console.Clear();
+            _pictures.PrintHenselt();
             Console.WriteLine(@"
  _    _                            _                    __              _                   _   _          _                   
 | |  | |                          | |                  / _|            (_)                 | | | |        | |                  
@@ -535,6 +556,7 @@ __      _____  ___| | __
         public void EndDialogue()
         {
             Console.Clear();
+            _pictures.PrintHenselt();
             Console.WriteLine(@"
  _____ _       _____                _ _                             _                                               _ 
 |  _  | |     |  __ \              | | |                           | |                                             | |
@@ -552,8 +574,9 @@ __      _____  ___| | __
  \__|_| |_|\___|   \_/\_/ |_| |_|\___/|_|\___| \_| \_/_|_| |_|\__, |\__,_|\___/|_| |_| |_| (_)
                                                                __/ |                          
                                                               |___/                           ");
-            Thread.Sleep(3000);
+            Thread.Sleep(3500);
             Console.Clear();
+            _pictures.PrintHenselt();
             Console.WriteLine(@"
   ___   __ _              _   _           _                                      _ _ _   _          
  / _ \ / _| |            | | | |         | |                                    (_) | | | |         
