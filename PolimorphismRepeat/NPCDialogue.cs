@@ -607,6 +607,8 @@ __      _____| | ___ ___  _ __ ___   ___    __ _ _ __  _   ___      _| |__   ___
             Console.WriteLine("Press ENTER to end the game...");
             Console.ReadKey();
             Console.Clear();
+            Thread.Sleep(3000);
+            Console.WriteLine("Пусть лёгким бываю я, словно перо, быть долго и троллю со мной не легко");
         }
 
         public void ShowCurrentInfo(Witcher witcher)
