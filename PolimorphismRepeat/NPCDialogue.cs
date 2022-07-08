@@ -111,6 +111,8 @@ __   __            _                       _                                    
 |_| |_|_|\__|  \__|_| |_|\___| |_|  \___/ \__,_|\__,_|  \__,_|\__, |\__,_|_|_| |_|
                                                                __/ |              
                                                               |___/               ");
+            Console.WriteLine("Press ENTER to end the game...");
+            Console.ReadKey();
         }
 
         public void PrepForSecondBattleDialogue()
